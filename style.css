@@ -1,0 +1,438 @@
+
+/* creating the Solar System website --CSS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100%;
+    /* border: 2px solid red; */
+
+    background: url('black_background.jpg');
+    background-repeat: no-repeat;
+    background-position: middle;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.outer{
+    border: 2px solid rgb(237, 192, 13);
+    box-shadow: 0 0 15px rgb(222, 180, 14);
+    height: 500px;
+    width: 500px;
+    border-radius: 50%;
+    position: relative;
+}
+.inner{
+    border: 1px solid #232323;
+    height: 0px;
+    width: 700px;
+    top: 250px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+}
+
+#sun{
+    height: 130px;
+    margin: 0 0 0 168px;
+    z-index: 10;
+    cursor: pointer;
+    transform: translate(-0%,-0%);
+    animation: rotateSun 10s linear infinite;
+
+}
+@keyframes rotateSun {
+    0% {
+      transform: translate(-0%, -0%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-0%, -0%) rotate(360deg);
+    }
+  }
+
+
+#sun:hover{
+    transform: scale(1.1);
+}
+#earth{
+    height: 80px;
+    margin: 0 0 0 40px;
+    z-index: 10;
+    cursor: pointer;
+    /* transition: cubic-bezier(1, 0, 0, 1); */
+    transform: translate(0%,0%);
+    animation: rotateSun 10s linear infinite;
+
+}
+
+
+
+#earth:hover{
+    transform: scale(1.1);
+}
+.dot:hover{
+    box-shadow: 0 0 8px white;
+    cursor: pointer;
+}
+#l2{
+    height: 20px;
+    margin: 0 0 0 155px;
+    z-index: 10;
+}
+#l3{
+    height: 20px;
+    z-index: 10;
+    right: -10px;
+}
+.lag3{
+    right: -10px;
+}
+
+.lagrange{
+    display: flex;
+    flex-direction: column;
+    gap: 170px;
+}
+
+
+#l1{
+    height: 20px;
+    margin: 0 0 0 80px;
+    z-index: 10;
+}
+#l4{
+    height: 20px;
+    margin: 0 0 0 80px;
+    /* margin-bottom: 360px; */
+    z-index: 10;
+}
+#l5{
+    height: 20px;
+    margin: 0 0 0 80px;
+    /* margin-top: 360px; */
+    z-index: 10;
+}
+.inner2{
+    border: 1px solid #232323;
+    height: 500px;
+    width: 0px;
+    left: 250px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    /* border: 2px solid green; */
+    /* clip-path: polygon(50% 0, 75% 50%, 49% 100%, 23% 51%); */
+}
+
+#tri{
+    background-color: white;
+    clip-path: polygon(50% 0, 75% 50%, 49% 100%, 23% 51%);
+}
+/* .wrapper-out{
+    display: flex;
+} */
+
+
+/* color coding */
+.color-code{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #131313f6;
+    
+    border-top: 1px solid rgb(112, 112, 112);
+    border-bottom: 1px solid rgb(112, 112, 112);
+
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px 200px;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+.head{
+   
+    text-align: center;
+}
+.head-l {
+    padding-top: 50px;
+    margin: 0 40px 40px 40px;
+}
+ 
+#str{
+    font-size: 2.6rem;
+    
+}
+.desc{
+    /* border: 2px solid red ; */
+    height: 100%;
+    width: 100%;
+    color: white;
+    background-color: #232323;
+    
+
+}
+.inner-desc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+.card1{
+    border: 2px solid white;
+    width: 60%;
+    height: 380px;
+    border-radius: 15px;
+    transition:  .4s ease-in-out;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.card1:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 5px whitesmoke;
+}
+.lph{
+    text-align:left ;
+    padding: 10px;
+}
+#strp{
+    font-size: 2rem;
+}
+.lp{
+    background-color: #333;
+    padding: 4px;
+    font-size:1.1rem ;
+    border-radius: 10px;
+}
+.lp-desc{
+    font-size: 0.9rem;
+    text-align: justify;
+    font-weight: 450;
+    padding: 10px 10px 10px 15px;
+    line-height: 1.4rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#c5{
+    margin-bottom: 50px;
+}
+.footer{
+    border-top: 1px solid rgb(112, 112, 112);
+    background-color: #232323;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.github{
+    border: 2px solid white;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #333;
+    transition: .3s  ease-in;
+}
+.github:hover{
+    transform: scale(1.2);
+}
+.github>i{
+    font-size: 2.1rem;
+}
+.p-copy{
+    line-height: 2rem;
+    text-align: center;
+    font-size: .9rem;
+    color: rgb(195, 195, 195);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.made{
+    color: #333;
+    font-size: 1.2rem;
+    background-color: #181818;
+    padding: 3px;
+    border-radius: 10px;
+}
+
+
+
+/* responsiveness */
+
+@media screen and (max-width: 970px) {
+    .outer{
+        height: 250px;
+        width: 250px;
+    }
+    .inner{
+        width: 350px;
+    }
+    #sun{
+        height: 60px;
+        margin: 0 0 0 90px;
+        
+    }
+    #earth{
+        height: 40px;
+        margin: 0 0 0 30px;
+    }
+
+    .inner{
+        border: 1px solid #232323;
+        height: 0px;
+        width: 350px;
+        top: 125px;
+       
+    }
+    .inner2{
+        border: 1px solid #232323;
+        height: 245px;
+        width: 0px;
+        left: 130px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        /* border: 2px solid green; */
+        /* clip-path: polygon(50% 0, 75% 50%, 49% 100%, 23% 51%); */
+    }
+    .lagrange{
+        display: flex;
+        flex-direction: column;
+        gap: 90px;
+    }
+    #l1{
+        height: 10px;
+        margin: 0 0 0 30px;
+        z-index: 10;
+    }
+    #l4{
+        height: 10px;
+        margin: 0 0 0 30px;
+        /* margin-bottom: 360px; */
+        z-index: 10;
+    }
+    #l5{
+        height: 10px;
+        margin: 0 0 0 30px;
+        /* margin-top: 360px; */
+        z-index: 10;
+    }
+    #l2{
+        height: 10px;
+        margin: 0 0 0 70px;
+    }
+    #l3{
+        height: 10px;
+
+    }
+   
+}
+
+@media screen and (max-width:845px) {
+    .card1{
+        
+        width: 90%;
+        height: fit-content;
+        padding: 5px;
+    }
+    .head-l {
+        padding-top: 50px;
+        margin: 0 40px 40px 40px;
+    }
+     
+
+.lp-desc{
+    padding: 10px 5px 5px 10px;
+
+} 
+    
+}
+
+
+@media screen and (max-width: 465px) {
+    .outer{
+        height: 200px;
+        width: 200px;
+    }
+    .inner{
+        width: 100px;
+    }
+    #sun{
+        height: 40px;
+        margin: 0 0 0 65px;
+        
+    }
+    #earth{
+        height: 20px;
+        margin: 0 0 0 45px;
+    }
+
+    .inner{
+        border: 1px solid #232323;
+        height: 0px;
+        width: 250px;
+        top: 99px;
+       
+    }
+    .inner2{
+        border: 1px solid #232323;
+        height: 200px;
+        width: 0px;
+        left: 95px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        /* border: 2px solid green; */
+        /* clip-path: polygon(50% 0, 75% 50%, 49% 100%, 23% 51%); */
+    }
+    .lagrange{
+        display: flex;
+        flex-direction: column;
+        gap: 75px;
+    }
+    #l1{
+        height: 8px;
+        margin: 0 0 0 20px;
+        z-index: 10;
+    }
+    #l4{
+        height: 8px;
+        margin: 0 0 0 20px;
+        /* margin-bottom: 360px; */
+        z-index: 10;
+    }
+    #l5{
+        height: 8px;
+        margin: 0 0 0 20px;
+        /* margin-top: 360px; */
+        z-index: 10;
+    }
+    #l2{
+        height: 8px;
+        margin: 0 0 0 35px;
+    }
+    #l3{
+        height: 8px;
+
+    }
+}
